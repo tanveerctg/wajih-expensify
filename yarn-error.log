@@ -1,0 +1,88 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\tanveer\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add enzyenzyenzyenzy
+
+PATH: 
+  C:\Users\tanveer\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\tanveer\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client;C:\Program Files\Intel\iCLS Client;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\dotnet;C:\Program Files (x86)\Brackets\command;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Program Files\nodejs;C:\Program Files\Microsoft VS Code\bin;C:\Ruby24-x64\bin;C:\Users\tanveer\AppData\Local\atom\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\tanveer\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  10.5.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/enzyenzyenzyenzy: Not found
+      at Request.params.callback [as _callback] (C:\Users\tanveer\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:65656:18)
+      at Request.self.callback (C:\Users\tanveer\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:134675:22)
+      at Request.emit (events.js:182:13)
+      at Request.<anonymous> (C:\Users\tanveer\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:135658:10)
+      at Request.emit (events.js:182:13)
+      at IncomingMessage.<anonymous> (C:\Users\tanveer\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:135578:12)
+      at Object.onceWrapper (events.js:273:13)
+      at IncomingMessage.emit (events.js:187:15)
+      at endReadableNT (_stream_readable.js:1081:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "indecision",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "build": "webpack --watch",
+      "dev-server": "webpack-dev-server",
+      "live-server": "live-server public/",
+      "jest": "jest --env=jsdom --colors --coverage test",
+      "test": "jest --colors"
+    },
+    "jest": {
+      "verbose": true,
+      "testURL": "http://localhost/"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "babel-cli": "^6.24.1",
+      "babel-core": "^6.26.3",
+      "babel-loader": "^7.1.5",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "babel-preset-env": "^1.5.2",
+      "babel-preset-react": "^6.24.1",
+      "css-loader": "^0.28.4",
+      "enzyme": "^3.3.0",
+      "jest": "^23.4.2",
+      "live-server": "^1.2.0",
+      "moment": "^2.22.2",
+      "normalize-scss": "^7.0.1",
+      "normalize.css": "^8.0.0",
+      "react": "^16.4.1",
+      "react-addons-shallow-compare": "^15.6.0",
+      "react-dates": "^17.1.1",
+      "react-dom": "^16.4.1",
+      "react-modal": "^2.2.2",
+      "react-redux": "^5.0.7",
+      "react-router-dom": "^4.3.1",
+      "redux": "^4.0.0",
+      "style-loader": "^0.21.0",
+      "uuid": "^3.3.2",
+      "validator": "^10.4.0",
+      "webpack-dev-server": "^2.5.1"
+    },
+    "devDependencies": {
+      "babel-plugin-transform-class-properties": "^6.24.1",
+      "node-sass": "^4.9.2",
+      "postcss-loader": "^2.1.6",
+      "sass-loader": "^7.0.3",
+      "webpack": "^3.12.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
