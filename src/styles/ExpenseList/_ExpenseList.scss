@@ -1,0 +1,15 @@
+//ExpenseList
+.expenseList{
+  display:grid; 
+  width:$desktop-view;
+  margin-left: auto;
+  margin-right: auto;
+  border:1px solid #f1eff2;
+}
+.expenseList__1stPart{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  padding:15px;
+  background-color:#f9f8fa; 
+  border-bottom:1px solid rgb(219, 219, 219);
+}

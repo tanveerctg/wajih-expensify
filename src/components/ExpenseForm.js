@@ -2,7 +2,6 @@ import React from 'react';
 import moment from 'moment';
 import {  SingleDatePicker } from 'react-dates';
 import { connect } from 'react-redux';
-import uuid from 'uuid'
 
 export class ExpenseForm extends React.Component{
 
@@ -49,7 +48,6 @@ export class ExpenseForm extends React.Component{
         error:false
       }))
       this.props.onSubmit({
-        id:uuid(),
         description:this.state.description,
         note:this.state.note,
         amount:this.state.amount,
@@ -62,26 +60,28 @@ export class ExpenseForm extends React.Component{
 
     return(
        <div>         
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} className="expenseForm">
             <input 
               placeholder="Description"
               type="text"
               onChange={this.onDescriptionChange}
               value={this.state.description}
+              className="searchExpense"
             />
             <input 
               placeholder="Amount"
               type="number"
               onChange={this.onAmountChange}
               value={this.state.amount}
+              className="searchExpense"
             />
             <textarea 
               placeholder="Add some info (Optional)"
               type="text"
               onChange={this.onNoteChange}
               value={this.state.note}
+              className="searchText"
             />
-             <input type="submit" value="Submit"/>
             <SingleDatePicker
               date={this.state.createdat}
               onDateChange={this.onDateChange}
@@ -91,10 +91,11 @@ export class ExpenseForm extends React.Component{
               numberOfMonths={1}
               isOutsideRange={()=>false}
             />
-           
+            <input type="submit" value="Submit" className="addExpenseBtn"/>
           </form>
-          
-          {this.state.error && <p>Please fill up Description and Amount fields</p>}
+          <div className="errMsg">
+            {this.state.error && <p>Please fill up Description and Amount fields</p>}
+          </div>
       </div>
     )
   }

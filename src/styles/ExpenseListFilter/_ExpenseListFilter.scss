@@ -1,0 +1,41 @@
+.expenseListFilter{
+  display:grid;
+  width:$desktop-view;
+  margin-left: auto;
+  margin-right: auto;
+  grid-gap:1rem;
+  grid-template-columns:1fr 1fr auto;
+  padding:2rem;
+}
+.searchExpense{
+  padding:10px;
+}
+.sortExpense{
+  padding:10px;
+}
+.DateRangePicker{
+  display:grid;
+  grid-template-columns:auto;
+}
+@media (max-width: 980px) {
+  .expenseListFilter{
+    width:$tab-view;
+  }
+}
+@media (max-width: 790px) {
+  .expenseListFilter{
+    width:$mini-tab-view;
+    display:grid;
+    grid-template-columns:1fr;
+  }
+}
+@media (max-width: 685px) {
+  .expenseListFilter{
+    width:$mobile-view;
+  }
+}
+@media (max-width: 550px) {
+  .expenseListFilter{
+    width:$small-mobile-view;
+  }
+}

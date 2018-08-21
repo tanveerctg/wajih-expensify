@@ -7,11 +7,11 @@ export const addExpense=(exp)=>({
   expense:exp
 });
 export const startAddExpense=(expenseData={})=>{
-  return (dispatch)=>{
+  return (dispatch,getState)=>{
       const {description='',note='',createdat=0,amount=0}=expenseData;
       const expense={description,note,createdat,amount};
-
-      database.ref('expenses').push(expense).then(ref=>{
+      const uid=getState().authReducer.id;
+      database.ref(`users/${uid}/expenses`).push(expense).then(ref=>{
         dispatch(addExpense({
           id:ref.key,
           ...expense
@@ -26,9 +26,9 @@ export const remove=(item)=>({
   id:item.id
 })
 export const startRemoveExpense=(item)=>{
-  return (dispatch)=>{
-      console.log(item.id);
-      database.ref(`expenses/${item.id}`).remove().then(()=>{
+  return (dispatch,getState)=>{
+      const uid=getState().authReducer.id;
+      database.ref(`users/${uid}/expenses/${item.id}`).remove().then(()=>{
         dispatch(remove(item));
       })
     
@@ -44,8 +44,9 @@ export const editExpensePage=(id,update)=>({
 })
 
 export const startEditExpense=(id,update)=>{
-  return (dispatch)=>{
-    database.ref(`expenses/${id}`).update(update).then(()=>{
+  return (dispatch,getState)=>{
+    const uid=getState().authReducer.id;
+    database.ref(`users/${uid}/expenses/${id}`).update(update).then(()=>{
       dispatch(editExpensePage(id,update));
     })
   }
@@ -59,8 +60,9 @@ export const setExpense=(expenses)=>({
 });
 
 export const startSetExpense=()=>{
-  return (dispatch)=>{
-    database.ref('expenses').
+  return (dispatch,getState)=>{
+    const uid=getState().authReducer.id;
+    database.ref(`users/${uid}/expenses`).
     once('value')
     .then((snapshot)=>{
       const allExpenses=[];
@@ -69,7 +71,6 @@ export const startSetExpense=()=>{
           {
             id:childSnapshot.key,
             ...childSnapshot.val()
-
           });
       })
       dispatch(setExpense(allExpenses))

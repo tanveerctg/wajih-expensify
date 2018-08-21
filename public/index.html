@@ -11,5 +11,27 @@
   <div class="app"></div>
   <h1></h1>
   <script src="./bundle.js"></script>
+  <script>
+    let i=1;
+    let k=1;
+    let a=setInterval(()=>{
+      document.querySelector(`.load-${i}`).style.color='red';
+      i++;
+      if(i==4){
+        i=1;
+      }
+    },500);
+    let b=setInterval(()=>{
+      document.querySelector(`.load-${k}`).style.color='black';
+      k++;
+      if(k==4){
+        k=1;
+      }
+    },800)
+    setTimeout(()=>{
+      clearInterval(a);
+      clearInterval(b);
+    },1300);
+  </script>
 </body>
 </html>

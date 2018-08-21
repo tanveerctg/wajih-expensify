@@ -1,0 +1,23 @@
+
+//ExpenseListItem
+.expenseListItem{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  padding:15px;
+  align-items:center;
+  color:black;
+}
+.link__style{
+  text-decoration: none;
+}
+.expenseListItem__1st{
+  display:grid;
+  grid-gap:8px;
+}
+.expenseListItem__2nd{
+  display:grid;
+  align-items:center;
+}
+.expenseListItem:hover{
+  background-color: #f4f1f5;
+}

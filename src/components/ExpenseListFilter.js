@@ -26,20 +26,24 @@ class ExpenseListFilter extends React.Component{
   render(){
    
     return(
-      <div>
+      <div className="expenseListFilter">
+
           <input type="text" onChange={(e)=>{
             this.props.dispatch(set_By_Text(e.target.value));
-          }}/>
+          }} className="searchExpense" placeholder="Search Expense"/>
+  
           <select onChange={(e)=>{
             if(e.target.value==='amount'){
               this.props.dispatch(sortBy_amount(e.target.value));
             }else if(e.target.value==='date'){
               this.props.dispatch(sortBy_date(e.target.value));
             }
-          }}>
+          }} className="sortExpense">
             <option value="date">Date</option>
             <option value="amount">Amount</option>
           </select>
+
+          <div className="DateRangePicker">
           <DateRangePicker
             startDate={this.props.filter.startDate} 
             startDateId={uuid()}
@@ -52,6 +56,7 @@ class ExpenseListFilter extends React.Component{
             isOutsideRange={()=>false}
             showClearDates={true}
           />
+          </div>
       </div>
     )
   }

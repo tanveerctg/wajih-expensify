@@ -8,10 +8,10 @@ const config = {
   messagingSenderId: "159938377144"
 };
 firebase.initializeApp(config);
-
+const provider = new firebase.auth.GoogleAuthProvider();
 const database=firebase.database();
 
-export {firebase,database as default};
+export {firebase,provider,database as default};
 
 // database.ref().set({
 //   name:'wajih',

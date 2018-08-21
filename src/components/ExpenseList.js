@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import ExpenseListItem from './ExpenseListItem';
 import getFilterExpense from '../getFilterExpense/getFilterExpense';
 export const ExpenseList=(props)=>(
-  <div>
-    {props.expense.length===0?<h1>No expenses available</h1>: <h1>Expense List</h1>}
-    <h2>Total Expense:{props.totalExpense}</h2>
+  <div className="expenseList">
+    {<div className="expenseList__1stPart">
+      <span>Expense</span>
+      <span>Amount</span>
+    </div>}
     {
       props.expense.map((exp)=>(<ExpenseListItem key={exp.id} {...exp}/>))   
     }
@@ -14,8 +16,7 @@ export const ExpenseList=(props)=>(
 export default connect(
   (state) => {
     return {
-      expense:getFilterExpense(state.expenseReducer,state.filterReducer).hold,
-      totalExpense:getFilterExpense(state.expenseReducer,state.filterReducer).totalExpense
+      expense:getFilterExpense(state.expenseReducer,state.filterReducer).hold
     }
   }
 )(ExpenseList);
