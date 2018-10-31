@@ -45,7 +45,9 @@ firebase.auth().onAuthStateChanged((user)=>{
     store.dispatch(startSetExpense());
     appRender();
     console.log('login',user.uid);
+    console.log('in');
   }else{
+    console.log('out');
     appRender();
     store.dispatch(logout());
     history.push('/');

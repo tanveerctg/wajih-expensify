@@ -4,23 +4,6 @@ import { connect } from 'react-redux';
 import moment from 'moment';
 import getFilterExpense from '../getFilterExpense/getFilterExpense';
 
-// const ExpenseListItem=({id,description,createdat,amount})=>(
-
-//    <Link to={`edit/${id}`} className="link__style">
-//     <div className="expenseListItem">
-//       <div className="expenseListItem__1st">
-//         <h3>{description}</h3>
-//         <p>{moment(createdat).format('LL')}</p>
-//       </div>
-//       <div className="expenseListItem__2nd">
-//         <p>{converter(amount)} tk</p>
-//         <br/>
-//       </div>
-//     </div>
-//    </Link>
-// );
-
-// export default ExpenseListItem;
 
 class ExpenseListItem extends React.Component{
   converter=(number)=>{

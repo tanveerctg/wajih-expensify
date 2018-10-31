@@ -57,27 +57,7 @@ class Header extends React.Component{
     )
   }
 }
-// const Header=(props)=>{
-//   return(
-//     <div>
-//       <div className="Header__1st"> 
-//        <div className="Header__1st__inner"> 
-//         <Link to={`/dashboard`} className="link__style link__style__mainPage">
-//           <h1>Expensify</h1>
-//         </Link>
-//         <button onClick={props.startLogout} className="Header__btn">Logout</button>
-//        </div>
-//       </div>
-//       <div className="Header__2nd">
-//         <div className="Header__2nd__inner">
-//           {props.expense.length===0?<h1 className="red">No expenses available</h1>: <h1 className="red">Viewing {props.expense.length} expense totalling {props.totalExpense}tk</h1>}
-//           <NavLink to="/create" activeClassName="selected"><button className="Header__2nd__btn">Create Expense</button></NavLink>
-//         </div>
-//       </div>
-//     </div>
-//   )
 
-// }
 const mapDispatchtoProps=(dispatch)=>{
   return {
     startLogout:()=>dispatch(startLogout())

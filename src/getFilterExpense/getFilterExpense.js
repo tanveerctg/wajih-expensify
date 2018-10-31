@@ -15,7 +15,8 @@
   
     if(sortBy==='amount'){
   
-      hold=hold.sort((a,b)=>(a.amount<b.amount?1:-1))
+      hold=hold.sort((a,b)=>{
+        return (Number(a.amount)<Number(b.amount)?1:-1)})
     }else if(sortBy==='date'){
       
       hold=hold.sort((a,b)=>(a.createdat<b.createdat?1:-1))
