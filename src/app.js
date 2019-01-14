@@ -31,7 +31,9 @@ ReactDOM.render(<Loader/>,document.querySelector('.app'));
 
 let hasrendered=true;
 const appRender=()=>{
+
   if(hasrendered){
+
     setTimeout(()=>{
       ReactDOM.render(jsx,document.querySelector('.app')); 
     },1100);
